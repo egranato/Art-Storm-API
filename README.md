@@ -1,4 +1,6 @@
 # Art-Storm-API
+![ERD](http://i.imgur.com/2Cp9Miq.png)
+
 # Team
 BEAT Media
 
