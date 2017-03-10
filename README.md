@@ -1,5 +1,5 @@
 # Art-Storm-API
-![ERD](http://i.imgur.com/2Cp9Miq.png)
+![ERD](http://i.imgur.com/GCnTfzO.png)
 
 # Team
 BEAT Media
