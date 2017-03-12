@@ -23,6 +23,7 @@ default: &default
 
 development:
   <<: *default
+  url: <%= ENV['LOCAL_DATABASE'] %>
   database: server_development
 
   # The specified database role being used to connect to postgres.
@@ -76,13 +77,9 @@ test:
 #   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
 #
 # You can use this database configuration with:
-#
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
-
 
 production:
+  url: <%= ENV['DATABASE_URL'] %>
   <<: *default
   database: server_production
   username: server
