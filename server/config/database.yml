@@ -23,6 +23,7 @@ default: &default
 
 development:
   <<: *default
+  url: <%= ENV['LOCAL_DATABASE'] %>
   database: server_development
 
   # The specified database role being used to connect to postgres.
@@ -71,14 +72,14 @@ test:
 # On Heroku and other platform providers, you may have a full connection URL
 # available as an environment variable. For example:
 #
+
+
 #   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
 #
 # You can use this database configuration with:
-#
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
+
 production:
+  url: <%= ENV['DATABASE_URL'] %>
   <<: *default
   database: server_production
   username: server
