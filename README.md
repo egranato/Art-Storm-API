@@ -2,10 +2,9 @@
 ![ERD](http://i.imgur.com/GCnTfzO.png)
 
 # Team
-BEAT Media
+Ruby on Rails API (this repo): Ethan Granato (https://github.com/egranato) and Anthony Valdez (https://github.com/ajvalde)
 
-# Art-storm
-Web page displaying local NoCo artists.
+React Front-End (): Richard Beese (https://github.com/BZhawaii) and Tara Mason (https://github.com/taramason)
 
 #Project Description
 An app to find artists for hire.
