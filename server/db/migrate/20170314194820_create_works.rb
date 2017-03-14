@@ -5,7 +5,7 @@ class CreateWorks < ActiveRecord::Migration[5.0]
       t.string :name
       t.text :description
       t.text :work_url
-      t.references :aritist, foreign_key: true
+      t.references :aritists, foreign_key: true
 
       t.timestamps
     end
