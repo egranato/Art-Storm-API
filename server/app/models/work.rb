@@ -1,3 +1,3 @@
 class Work < ApplicationRecord
-  belongs_to :aritists
+  belongs_to :artists
 end
