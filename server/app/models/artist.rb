@@ -1,4 +1,4 @@
 class Artist < ApplicationRecord
   has_many :follows
-  has_many :artworks
+  has_many :works
 end
