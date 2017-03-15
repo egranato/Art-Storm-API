@@ -1,5 +1,6 @@
 class ArtistController < JSONAPI::ResourceController
   def index
+
     artists = Artist.all
     render json: {stats: 'Success', message: 'Loaded all artists', data:artists}, status: :ok
   end
@@ -41,4 +42,8 @@ class ArtistController < JSONAPI::ResourceController
     params.require(:artist).permit(:first, :last, :email, :password, :username, :phone, :website_url, :portrait_url, :bio, :quick_intro)
   end
 
+
+# artists = User.where("is_artist" = True)
+# render json: {status: 'Success', message: 'Loaded all artists', data: artists}, status: :ok
+#end
 end

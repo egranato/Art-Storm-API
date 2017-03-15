@@ -1,6 +1,6 @@
 class UserController < JSONAPI::ResourceController
    def index
-     users = User.all
+     users = User.where("is_artist" = False)
      render json: {status: 'Success', message: 'Loaded all users', data: users}, status: :ok
    end
 
@@ -44,3 +44,19 @@ class UserController < JSONAPI::ResourceController
 
 
 end
+# Create password hash:
+# def create
+#   @user = User.new(params[:user])
+#   @user.password = params[:password]
+#   @user.save!
+# end
+
+#authentication:
+# def login
+#   @user = User.find_by_email(params[:email])
+#   if @user.password == params[:password]
+#     give_token
+#   else
+#     redirect_to home_url
+#   end
+# end
