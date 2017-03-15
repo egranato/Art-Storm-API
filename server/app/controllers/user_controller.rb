@@ -4,9 +4,9 @@ class UserController < JSONAPI::ResourceController
      render json: {status: 'Success', message: 'Loaded all users', data: users}, status: :ok
    end
 
-   def show
-     render json: {data: user}
-   end
+  #  def show
+  #    render json: {data: user}
+  #  end
 
 
   def create
