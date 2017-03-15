@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314194908) do
+ActiveRecord::Schema.define(version: 20170315184503) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,12 +31,13 @@ ActiveRecord::Schema.define(version: 20170314194908) do
   end
 
   create_table "follows", force: :cascade do |t|
-    t.integer  "artists_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["artists_id"], name: "index_follows_on_artists_id", using: :btree
-    t.index ["user_id"], name: "index_follows_on_user_id", using: :btree
+    t.integer  "follower_id"
+    t.integer  "followed_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["followed_id"], name: "index_follows_on_followed_id", using: :btree
+    t.index ["follower_id", "followed_id"], name: "index_follows_on_follower_id_and_followed_id", unique: true, using: :btree
+    t.index ["follower_id"], name: "index_follows_on_follower_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,8 +46,18 @@ ActiveRecord::Schema.define(version: 20170314194908) do
     t.string   "first"
     t.string   "last"
     t.text     "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "is_artist"
+    t.string   "phone"
+    t.text     "website_url"
+    t.text     "portrait_url"
+    t.text     "bio"
+    t.text     "quick_intro"
+    t.boolean  "is_admin"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
   create_table "works", force: :cascade do |t|
@@ -60,7 +71,5 @@ ActiveRecord::Schema.define(version: 20170314194908) do
     t.index ["artists_id"], name: "index_works_on_artists_id", using: :btree
   end
 
-  add_foreign_key "follows", "artists", column: "artists_id"
-  add_foreign_key "follows", "users"
   add_foreign_key "works", "artists", column: "artists_id"
 end
