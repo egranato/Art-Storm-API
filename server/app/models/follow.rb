@@ -1,4 +1,4 @@
 class Follow < ApplicationRecord
-  belongs_to :artist, optional: true
-  belongs_to :user, optional: true
+  belongs_to :follower, class_name: "User"
+  belongs_to :followed, class_name: "User"
 end

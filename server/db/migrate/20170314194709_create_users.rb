@@ -6,7 +6,8 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :first
       t.string :last
       t.text :password
-
+      t.boolean :is_artist
+      
       t.timestamps
     end
   end

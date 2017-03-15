@@ -1,6 +1,6 @@
 class UserController < JSONAPI::ResourceController
    def index
-     users = User.all
+     users = User.where("is_artist" = False)
      render json: {status: 'Success', message: 'Loaded all users', data: users}, status: :ok
    end
 
