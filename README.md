@@ -1,5 +1,5 @@
 # Art-Storm-API
-![ERD](http://i.imgur.com/GCnTfzO.png)
+![ERD](http://i.imgur.com/KJRg6Lg.png)
 
 # Team
 Ruby on Rails API (this repo): Ethan Granato (https://github.com/egranato) and Anthony Valdez (https://github.com/ajvalde)
