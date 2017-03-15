@@ -13,7 +13,7 @@ class UserController < JSONAPI::ResourceController
   def create
     user = User.new(user_params)
     if user.save
-      render json: {status: 'Success', data: user}
+      head :ok
     else
     end
   end
@@ -39,7 +39,7 @@ class UserController < JSONAPI::ResourceController
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :first, :last, :password)
+    params.require(:user).permit(:username, :email, :first, :last, :password_digest)
   end
 
 

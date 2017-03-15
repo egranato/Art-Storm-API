@@ -19,15 +19,15 @@ ActiveRecord::Schema.define(version: 20170314194908) do
     t.string   "first"
     t.string   "last"
     t.string   "email"
-    t.text     "password"
+    t.text     "password_digest"
     t.string   "username"
     t.string   "phone"
     t.text     "website_url"
     t.text     "portrait_url"
     t.text     "bio"
     t.text     "quick_intro"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "follows", force: :cascade do |t|
@@ -44,9 +44,9 @@ ActiveRecord::Schema.define(version: 20170314194908) do
     t.string   "email"
     t.string   "first"
     t.string   "last"
-    t.text     "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "works", force: :cascade do |t|
