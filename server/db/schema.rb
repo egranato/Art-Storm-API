@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20170316192706) do
     t.text     "portrait_url"
     t.text     "bio"
     t.text     "quick_intro"
-    t.text     "password"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
@@ -45,7 +44,6 @@ ActiveRecord::Schema.define(version: 20170316192706) do
     t.string   "email"
     t.string   "first"
     t.string   "last"
-    t.text     "password"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
