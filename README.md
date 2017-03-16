@@ -4,7 +4,7 @@
 # Team
 Ruby on Rails API (this repo): Ethan Granato (https://github.com/egranato) and Anthony Valdez (https://github.com/ajvalde)
 
-React Front-End (): Richard Beese (https://github.com/BZhawaii) and Tara Mason (https://github.com/taramason)
+React Front-End (https://github.com/BZhawaii/art-storm-deploy): Richard Beese (https://github.com/BZhawaii) and Tara Mason (https://github.com/taramason)
 
 #Project Description
 An app to find artists for hire.
