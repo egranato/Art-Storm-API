@@ -1,4 +1,7 @@
 class ArtistController < JSONAPI::ResourceController
+
+  require 'digest'
+
   def index
     artists = Artist.all
     render json: {stats: 'Success', message: 'Loaded all artists', data:artists}, status: :ok
