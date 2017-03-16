@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314194908) do
+ActiveRecord::Schema.define(version: 20170316192706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,15 +19,16 @@ ActiveRecord::Schema.define(version: 20170314194908) do
     t.string   "first"
     t.string   "last"
     t.string   "email"
-    t.text     "password_digest"
     t.string   "username"
     t.string   "phone"
     t.text     "website_url"
     t.text     "portrait_url"
     t.text     "bio"
     t.text     "quick_intro"
+    t.text     "password"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
   create_table "follows", force: :cascade do |t|
@@ -44,9 +45,10 @@ ActiveRecord::Schema.define(version: 20170314194908) do
     t.string   "email"
     t.string   "first"
     t.string   "last"
-    t.text     "password_digest"
+    t.text     "password"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
   create_table "works", force: :cascade do |t|

@@ -10,6 +10,7 @@ class CreateArtists < ActiveRecord::Migration[5.0]
       t.text :portrait_url
       t.text :bio
       t.text :quick_intro
+      t.text :password
 
       t.timestamps
     end
