@@ -4,7 +4,6 @@ class CreateArtists < ActiveRecord::Migration[5.0]
       t.string :first
       t.string :last
       t.string :email
-      t.text :password_digest
       t.string :username
       t.string :phone
       t.text :website_url
