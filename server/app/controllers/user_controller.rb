@@ -43,7 +43,7 @@ class UserController < JSONAPI::ResourceController
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :first, :last, :password_digest)
+    params.require(:user).permit(:username, :email, :first, :last, :password)
   end
 
 

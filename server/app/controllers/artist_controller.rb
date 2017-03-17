@@ -41,7 +41,7 @@ class ArtistController < JSONAPI::ResourceController
   end
 
   def artist_params
-    params.require(:artist).permit(:first, :last, :email, :password_digest, :username, :phone, :website_url, :portrait_url, :bio, :quick_intro)
+    params.require(:artist).permit(:first, :last, :email, :password, :username, :phone, :website_url, :portrait_url, :bio, :quick_intro)
   end
 
 end
